@@ -11,6 +11,10 @@ body {
 
 }
 
+a {
+  text-decoration: none;
+}
+
 // panigition
 
 .pagination {
@@ -73,6 +77,7 @@ body {
       font-size  : 16px;
       font-weight: 400;
     }
+
 
     input {
       padding      : 18px 10px;
@@ -229,8 +234,8 @@ li {
 }
 
 a {
-  padding: 18px 81px;
-  color  : inherit;
+  // padding: 18px 81px;
+  color: inherit;
 
 }
 

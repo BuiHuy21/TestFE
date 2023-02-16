@@ -6,13 +6,17 @@ const addPost = (title, desc, tags) => {
   return axios.post("/posts", {
     title: title,
     description: desc,
-    tags: tags,
+    tags: [...tags],
   });
 };
 const deletePost = (postId) => {
   return axios.delete(`/posts/${postId}`);
 };
-const editPost = (editId) => {
-  return axios.patch(`/posts/${editId}`);
+const editPost = (editId, title, desc, tags) => {
+  return axios.patch(`/posts/${editId}`, {
+    title: title,
+    description: desc,
+    tags: tags,
+  });
 };
 export { getAllPost, addPost, deletePost, editPost };

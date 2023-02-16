@@ -9,11 +9,14 @@ const SignIn = () => {
     e.preventDefault();
   };
   const handleLogin = async () => {
-    const res = await login(userName);
-    const token = res.accessToken;
-    localStorage.setItem("token", token);
-    navigate("/");
-    console.log(res);
+    if (!userName) {
+      alert("vui long nhap ten dang nhap");
+    } else {
+      const res = await login(userName);
+      const token = res.accessToken;
+      localStorage.setItem("token", token);
+      navigate("/");
+    }
   };
   return (
     <div className="container ">
